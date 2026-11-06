@@ -1,0 +1,113 @@
+    
+
+/* TravelGo - Pink Background + Green Branding */
+
+:root {
+    --tg-green: #16845B;
+    --tg-green-dark: #116B49;
+    --tg-pink-bg: #FFF8FB;
+    --tg-border: #F0DCE6;
+    --tg-text: #292B35;
+}
+
+/* Page background */
+body {
+    background-color: var(--tg-pink-bg);
+    color: var(--tg-text);
+    font-family: Arial, sans-serif;
+}
+
+/* TravelGo logo */
+.navbar-brand {
+    color: var(--tg-green) !important;
+    font-weight: 700;
+}
+
+/* Navigation */
+.navbar {
+    background-color: #FFFFFF !important;
+    border-bottom: 1px solid var(--tg-border);
+}
+
+.navbar .nav-link {
+    color: #292B35 !important;
+    font-weight: 500;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: var(--tg-green) !important;
+}
+
+/* Main headings */
+h1, h2, h3, h4, h5 {
+    color: var(--tg-text);
+}
+
+/* Search and content panels */
+.card,
+.booking-card,
+.search-panel {
+    background-color: #FFFFFF;
+    border: 1px solid var(--tg-border);
+    box-shadow: none;
+}
+
+/* Input fields */
+.form-control,
+.form-select {
+    background-color: #FFFFFF;
+    border: 1px solid var(--tg-border);
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--tg-green);
+    box-shadow: 0 0 0 0.15rem rgba(22, 132, 91, 0.12);
+}
+
+/* Main buttons */
+.btn-primary,
+.btn-success,
+.search-btn {
+    background-color: var(--tg-green) !important;
+    border-color: var(--tg-green) !important;
+    color: #FFFFFF !important;
+}
+
+.btn-primary:hover,
+.btn-success:hover,
+.search-btn:hover {
+    background-color: var(--tg-green-dark) !important;
+    border-color: var(--tg-green-dark) !important;
+}
+
+/* Selected tabs */
+.nav-pills .nav-link.active {
+    background-color: var(--tg-green);
+    color: #FFFFFF !important;
+}
+
+/* Outlined buttons */
+.btn-outline-primary {
+    color: var(--tg-green);
+    border-color: var(--tg-green);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--tg-green);
+    color: #FFFFFF;
+}
+
+/* Tables */
+.table thead th {
+    background-color: #F3F8F5;
+}
+
+/* Keep pink page background on smaller screens */
+@media (max-width: 768px) {
+    body {
+        background-color: var(--tg-pink-bg);
+    }
+}
+

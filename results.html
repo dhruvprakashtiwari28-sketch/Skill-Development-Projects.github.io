@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TravelGo | Flight Results</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-body-tertiary">
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg bg-white border-bottom">
+    <div class="container">
+        <a class="navbar-brand fw-bold text-primary fs-4" href="index.html">TravelGo</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar" aria-controls="mainNavbar"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link active" href="flight.html">Flights</a></li>
+                <li class="nav-item"><a class="nav-link" href="hotels.html">Hotels</a></li>
+                <li class="nav-item"><a class="nav-link" href="holiday.html">Holiday Packages</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main class="container py-5">
+
+    <!-- Page Heading -->
+    <div class="mb-4">
+        <span class="badge text-bg-primary">FLIGHT SEARCH</span>
+        <h2 class="fw-bold mt-2">Available Flights</h2>
+        <p class="text-secondary">Choose a flight for your next journey.</p>
+    </div>
+
+    <!-- Search Summary -->
+    <div class="card border-0 shadow-sm mb-4">
+        <div class="card-body">
+            <h5 class="fw-bold">Your Search</h5>
+            <p class="text-secondary mb-2" id="searchDetails">Loading...</p>
+            <a href="index.html" class="btn btn-outline-primary btn-sm">Modify Search</a>
+        </div>
+    </div>
+
+    <!-- Flight Result -->
+    <div class="card border-0 shadow-sm">
+        <div class="card-body p-4">
+
+            <div class="d-flex justify-content-between">
+                <div>
+                    <h5 class="fw-bold">IndiGo</h5>
+                    <p class="text-secondary small">6E | Direct Flight</p>
+                </div>
+                <span class="badge text-bg-success">Non-stop</span>
+            </div>
+
+            <div class="row align-items-center g-3">
+                <div class="col-4">
+                    <h4 class="fw-bold">06:00 AM</h4>
+                    <p class="text-secondary">Bengaluru (BLR)</p>
+                </div>
+
+                <div class="col-4 text-center">
+                    <small class="text-secondary">2h 45m</small>
+                    <hr>
+                    <small>Direct</small>
+                </div>
+
+                <div class="col-4">
+                    <h4 class="fw-bold">08:45 AM</h4>
+                    <p class="text-secondary">Delhi (DEL)</p>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                <h4 class="text-primary fw-bold mb-0">₹5,499</h4>
+                <a href="booking.html" class="btn btn-primary">Book Now</a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="mt-4">
+        <a href="index.html" class="btn btn-outline-secondary">Back to Search</a>
+    </div>
+
+</main>
+
+<!-- Display Search Details -->
+<script>
+const p = new URLSearchParams(window.location.search);
+
+document.getElementById("searchDetails").textContent =
+    "From: " + (p.get("from") || "N/A") +
+    " | To: " + (p.get("to") || "N/A") +
+    " | Departure: " + (p.get("departure") || "N/A") +
+    " | Return: " + (p.get("returnDate") || "One way") +
+    " | Adults: " + (p.get("adults") || "N/A") +
+    " | Class: " + (p.get("travelClass") || "N/A");
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

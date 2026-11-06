@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TravelGo | Holiday Packages</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-body-tertiary">
+
+<nav class="navbar navbar-expand-lg bg-white border-bottom">
+    <div class="container">
+        <a class="navbar-brand fw-bold text-primary fs-4" href="index.html">TravelGo</a>
+        <div class="navbar-nav ms-auto">
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="flight.html">Flights</a>
+            <a class="nav-link" href="hotels.html">Hotels</a>
+            <a class="nav-link active" href="holiday.html">Holiday Packages</a>
+        </div>
+    </div>
+</nav>
+
+<main class="container py-5">
+
+    <div class="mb-4">
+        <h2 class="fw-bold">Explore Holiday Packages</h2>
+        <p class="text-secondary">Discover destinations for your next vacation.</p>
+    </div>
+
+    <!-- Holiday Packages -->
+    <div class="row g-3">
+
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="card-body">
+                    <span class="badge text-bg-primary">Beach Holiday</span>
+                    <h5 class="fw-bold mt-3">Goa Getaway</h5>
+                    <p class="text-secondary">3 Nights / 4 Days</p>
+                    <p>Enjoy beaches, local food and relaxing stays.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <strong class="text-primary">₹8,999</strong>
+                        <button class="btn btn-outline-primary btn-sm" onclick="selectPackage('Goa Getaway')">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="card-body">
+                    <span class="badge text-bg-success">Hill Station</span>
+                    <h5 class="fw-bold mt-3">Manali Escape</h5>
+                    <p class="text-secondary">4 Nights / 5 Days</p>
+                    <p>Explore mountain views and beautiful valleys.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <strong class="text-primary">₹12,499</strong>
+                        <button class="btn btn-outline-primary btn-sm" onclick="selectPackage('Manali Escape')">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="card-body">
+                    <span class="badge text-bg-warning">Adventure</span>
+                    <h5 class="fw-bold mt-3">Kerala Retreat</h5>
+                    <p class="text-secondary">3 Nights / 4 Days</p>
+                    <p>Experience backwaters and scenic landscapes.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <strong class="text-primary">₹10,999</strong>
+                        <button class="btn btn-outline-primary btn-sm" onclick="selectPackage('Kerala Retreat')">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="packageMessage" class="alert alert-info mt-4 d-none"></div>
+
+</main>
+
+<script>
+function selectPackage(name) {
+    const message = document.getElementById("packageMessage");
+    message.textContent = name + " selected.";
+    message.classList.remove("d-none");
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
